@@ -10,33 +10,39 @@ using System.Windows.Forms;
 
 namespace ForEachNiceM
 {
-    public partial class Form1 : Form
+    public partial class frmForEach : Form
     {
-        public Form1()
+        public frmForEach()
         {
             InitializeComponent();
 
-            // loop through each object on the fom ad make it green
-            foreach (Control aControlObject in this.Controls);
-
         }
 
-        private void lblPlease3_Click(object sender, EventArgs e)
+        private void btnClickMe_Click_1(object sender, EventArgs e)
         {
-            // if the object is a button, make it yellow
-
-            foreach (Control aControlObject in this.Controls) ;
- 
-            if (aControlObject.GetType() == typeof(Label));
+            // changing the colour
+            foreach (Control aControlObject in this.Controls)
             {
-                lblPlease.BackColor = Color.Yellow;
+                aControlObject.BackColor = Color.Yellow;
+                this.BackColor = Color.YellowGreen;
+
+                // if the object is a label change the color to pink
+                if (aControlObject.GetType() == typeof(Label))
+                {
+                    aControlObject.BackColor = Color.HotPink;
+                }
 
             }
         }
 
-        private void btnClick_Click(object sender, EventArgs e)
+        private void lblPlease_Click_1(object sender, EventArgs e)
         {
-           
+            // if the object is a button, make it yellow
+
+            foreach (Control aControlObject in this.Controls)
+                aControlObject.BackColor = Color.Red;
+            this.BackColor = Color.Blue;
+
         }
     }
 }
