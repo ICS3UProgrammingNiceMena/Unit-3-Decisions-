@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Nice Mena
+ * Created on: November 2nd 2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #25 - Control Objects
+ * This program changes the color of each object and its back color
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +24,6 @@ namespace ForEachNiceM
             InitializeComponent();
 
         }
-
         private void btnClickMe_Click_1(object sender, EventArgs e)
         {
             // changing the colour

@@ -45,7 +45,7 @@
             this.lblEnter.Size = new System.Drawing.Size(422, 25);
             this.lblEnter.TabIndex = 0;
             this.lblEnter.Text = "Enter your mark (number from 1-100)";
-            this.lblEnter.Click += new System.EventHandler(this.lblEnter_Click);
+  
             // 
             // btnCalculate
             // 
@@ -57,6 +57,7 @@
             this.btnCalculate.TabIndex = 1;
             this.btnCalculate.Text = "Calculate Average";
             this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click_1);
             // 
             // txtMark
             // 
