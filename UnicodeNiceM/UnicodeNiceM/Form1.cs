@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace UnicodeNiceM
 {
-    public partial class Form1 : Form
+    public partial class frmUnicode : Form
     {
-        public Form1()
+        public frmUnicode()
         {
             InitializeComponent();
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            // declare variables
+            int counter;
+            const int MAXNUMBER = 90, MINNUMBER = 65;
+            string character;
+
+            //clear list box
+            this.lstNumbers.Items.Clear();
+
+            // displaying the content
+            for (counter = MINNUMBER; counter <= MAXNUMBER; counter++)
+            {
+                character = char.ConvertFromUtf32(counter);
+                lstNumbers.Items.Add(character + "->" + counter);
+            }
+        
+
+
         }
     }
 }
